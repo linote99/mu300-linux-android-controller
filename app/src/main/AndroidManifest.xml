@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.linote.mu300controller">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.usb.host" android:required="false" />
+    <queries>
+        <package android:name="top.linote.ufiinstaller" />
+    </queries>
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/app_icon"
+        android:label="MU300 Linux OTG 控制器"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="false">
+        <activity
+            android:name="org.linote.mu300controller.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="org.linote.mu300controller.CleanupActivity" android:exported="false" />
+    </application>
+</manifest>
